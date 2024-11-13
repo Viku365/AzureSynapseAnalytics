@@ -18,51 +18,60 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
 ## Cómo Empezar
 ### Paso 1: Creación del Área de Trabajo de Synapse en Azure Portal
 1. **Abrir Azure Portal**: Ve a [Azure Portal](https://portal.azure.com/) y escribe "Synapse" en la barra de búsqueda sin pulsar enter.  
-   *► Insertar captura de pantalla mostrando la barra de búsqueda y la palabra "Synapse".*
+   ![image](https://github.com/user-attachments/assets/cdb9c9f2-b850-4cec-97a5-e64ac7433a77)
 
 2. **Seleccionar Azure Synapse Analytics**: En los resultados de búsqueda, bajo "Servicios", selecciona **Azure Synapse Analytics**.  
-   *► Insertar captura de pantalla mostrando los resultados de la búsqueda.*
 
 3. **Crear Área de Trabajo**: Selecciona **Crear** para comenzar a crear un área de trabajo.  
-   *► Insertar captura de pantalla de la opción "Crear".*
+   ![image](https://github.com/user-attachments/assets/0a8e4c65-7b39-43e3-9419-a1b7e6c86323)
+
 
 4. **Configurar la pestaña "Información básica" > Detalles del proyecto**:  
    - **Suscripción**: Selecciona la suscripción que tengas disponible.  
    - **Grupo de recursos**: Usa un grupo de recursos existente o crea uno nuevo.  
    - **Grupo de recursos administrados**: Déjalo en blanco.  
-   *► Insertar captura de pantalla mostrando la configuración de los detalles del proyecto.*
+   ![image](https://github.com/user-attachments/assets/9caef305-2a3c-446b-aa48-c2897141e78c)
+
 
 5. **Configurar la pestaña "Información básica" > Detalles del área de trabajo**:  
-   - **Nombre del área de trabajo**: Ingresa un nombre que sea único. Por ejemplo: `myworkspace`.  
-   - **Región**: Selecciona la misma región donde se encuentran tus aplicaciones y servicios para evitar problemas de rendimiento.  
-   *► Insertar captura de pantalla de los detalles del área de trabajo.*
+   - **Nombre del área de trabajo**: Ingresa un nombre que sea único. Por ejemplo: `myworkspaceai`.  
+   - **Región**: Selecciona la misma región donde se encuentran tus aplicaciones y servicios para evitar problemas de rendimiento. Nosotros seleccionamos `North Europe`
 
 6. **Seleccionar Data Lake Storage Gen2**:  
-   - **Nombre de la cuenta**: Selecciona **Crear nuevo** y asigna un nombre único, por ejemplo, `contosolake`.  
+   - **Nombre de la cuenta**: Selecciona **Crear nuevo** y asigna un nombre único, por ejemplo, `accname99`.  Importante recordad
    - **Nombre del sistema de archivos**: Selecciona **Crear nuevo** y asigna el nombre `users`.  
    - Marca la casilla para asignarte el rol de **Colaborador de datos de Storage Blob**.  
-   *► Insertar captura de pantalla mostrando la configuración del almacenamiento.*
+![image](https://github.com/user-attachments/assets/56083048-ebbd-4cbb-835a-fb68f238cec0)
+
 
 7. **Revisar y crear**: Selecciona **Revisar y crear** y luego **Crear**. Espera unos minutos hasta que el área de trabajo esté lista.  
-   *► Insertar captura de pantalla de la pantalla de revisión.*
+   ![image](https://github.com/user-attachments/assets/ad904b55-b766-4022-9848-d83b2f227ed1)
+
 
 ### Paso 2: Abrir Synapse Studio
 1. **Abrir Synapse Studio desde Azure Portal**: Una vez que el área de trabajo esté creada, ve a la sección "Información general" y selecciona **Abrir en el cuadro Abrir Synapse Studio**.  
-   *► Insertar captura de pantalla mostrando cómo abrir Synapse Studio.*
+![image](https://github.com/user-attachments/assets/3d2a16f1-b5f3-447e-bcdf-54f7f6b9397d)
+
 
 2. **Iniciar sesión en Synapse Studio**: Inicia sesión utilizando tu suscripción de Azure.  
-   *► Insertar captura de pantalla de la pantalla de inicio de sesión.*
+![image](https://github.com/user-attachments/assets/acd7db2d-0541-4274-a870-2064afadd238)
+
 
 ### Paso 3: Cargar Datos de Ejemplo
 1. **Descargar el dataset de NYC Taxi**: Descarga el dataset "NYC Taxi - green trip" en tu equipo desde el siguiente [vínculo](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).  
    - Cambia el nombre del archivo descargado a `NYCTripSmall.parquet`.  
-   *► Insertar captura de pantalla de la ubicación del dataset.*
+![image](https://github.com/user-attachments/assets/2653fea9-ea04-418a-8e67-be59b54e5bb8)
+
 
 2. **Cargar el archivo en Synapse Studio**:  
-   - Ve al centro **Datos** en Synapse Studio.  
-   - Selecciona **Vinculado** y luego el contenedor llamado `users (Primary)`.  
-   - Selecciona **Cargar** y sube el archivo `NYCTripSmall.parquet`.  
-   *► Insertar captura de pantalla mostrando el proceso de carga del archivo.*
+   - Ve al centro **Datos** en Synapse Studio.
+![image](https://github.com/user-attachments/assets/1cfc74b1-b377-41a6-bb5e-88bffa8d9229)
+ 
+   - Selecciona **Vinculado** y luego el contenedor llamado `users (Primary)`.
+![image](https://github.com/user-attachments/assets/ea31e6d7-55e2-44a2-ad7b-90ce057b67ac)
+
+   - Selecciona **Cargar** y sube el archivo `NYCTripSmall.parquet`.
+![image](https://github.com/user-attachments/assets/1338f5d5-cf74-4e22-bdcd-d03e00f9e9db)
 
 ### Paso 4: Análisis de Datos con un Grupo de SQL Sin Servidor
 1. **Crear un script de SQL**: En Synapse Studio, ve al centro de **Desarrollo** y crea un nuevo script de SQL.  
@@ -77,7 +86,8 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
        ) AS [result]
    ```  
    - Selecciona **Run (Ejecutar)**.  
-   *► Insertar captura de pantalla mostrando el código y el resultado de la consulta.*
+![image](https://github.com/user-attachments/assets/3c5e4a69-80b4-4203-9476-efc9fc1a2602)
+
 
 ### Paso 5: Creación de una Base de Datos de Exploración de Datos
 1. **Crear una Base de Datos Independiente**: Usa la base de datos `master` para crear una nueva base de datos denominada `DataExplorationDB`:  
@@ -86,13 +96,13 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    COLLATE Latin1_General_100_BIN2_UTF8
    ```  
    *► Importante: Usa una intercalación con sufijo `_UTF8` para que el texto UTF-8 se convierta correctamente en columnas `VARCHAR`.*  
-   *► Insertar captura de pantalla mostrando el resultado de la creación de la base de datos.*
 
 2. **Cambiar el Contexto de la Base de Datos**: Cambia el contexto de la base de datos desde `master` a `DataExplorationDB`:  
    ```sql
    USE DataExplorationDB
    ```  
-   *► Insertar captura de pantalla mostrando cómo cambiar el contexto de la base de datos.*
+![image](https://github.com/user-attachments/assets/8209ec46-dd3c-404c-a126-2b5c1cfb85ea)
+
 
 3. **Crear Objetos de Utilidad**:  
    - Crea un origen de datos externo:  
@@ -101,31 +111,7 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    WITH ( LOCATION = 'https://contosolake.dfs.core.windows.net')
    ```  
    *► Nota: Los orígenes de datos externos se pueden crear sin credenciales.*  
-   *► Insertar captura de pantalla mostrando el código y el resultado.*
-
-4. **Crear un Inicio de Sesión para un Usuario**:  
-   - Crea un inicio de sesión y un usuario de base de datos:  
-   ```sql
-   CREATE LOGIN data_explorer WITH PASSWORD = 'My Very Strong Password 1234!';
-   CREATE USER data_explorer FOR LOGIN data_explorer;
-   GO
-   GRANT ADMINISTER DATABASE BULK OPERATIONS TO data_explorer;
-   GO
-   ```  
-   *► Insertar captura de pantalla mostrando el resultado de la creación del usuario.*
-
-5. **Explorar el Contenido del Archivo**:  
-   ```sql
-   SELECT
-       TOP 100 *
-   FROM
-       OPENROWSET(
-           BULK '/users/NYCTripSmall.parquet',
-           DATA_SOURCE = 'ContosoLake',
-           FORMAT='PARQUET'
-       ) AS [result]
-   ```  
-   *► Insertar captura de pantalla mostrando el código y el resultado de la consulta.*
+![image](https://github.com/user-attachments/assets/19836223-a317-46a0-8f74-60927635fa11)
 
 ### Paso 6: Creación de un Grupo de Apache Spark Sin Servidor
 1. **Crear un Grupo de Apache Spark**:  
@@ -135,11 +121,13 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    - En **Tamaño del nodo** escribe `Pequeño`.  
    - En **Número de nodos**, establece el valor mínimo en `3` y el máximo en `3`.  
    - Selecciona **Revisar y crear > Crear**.  
-   *► Insertar captura de pantalla mostrando la configuración del grupo de Apache Spark.*
+![image](https://github.com/user-attachments/assets/74e37407-7b2b-41ed-bc8d-d1119fa2e086)
+
 
 ### Paso 7: Análisis de Datos de Taxis de Nueva York con un Grupo de Spark
 1. **Crear un Nuevo Notebook**: Crea un nuevo notebook en Synapse Studio y asocia el grupo de Spark `Spark1`.  
-   *► Insertar captura de pantalla mostrando el notebook creado y la asociación.*
+   ![image](https://github.com/user-attachments/assets/75e01912-f104-42de-877a-055385e08cdd)
+
 
 2. **Cargar y Mostrar Datos**:  
    ```python
@@ -147,14 +135,17 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    df = spark.read.load('abfss://users@contosolake.dfs.core.windows.net/NYCTripSmall.parquet', format='parquet')
    display(df.limit(10))
    ```  
-   *► Insertar captura de pantalla mostrando el resultado de la ejecución de la celda.*
+![image](https://github.com/user-attachments/assets/cc805cf3-7172-490c-9144-a00b5ff3a4bb)
+
+![image](https://github.com/user-attachments/assets/170f0867-7500-4c1f-a2ee-283474ba0016)
 
 3. **Ver el Esquema de la Trama de Datos**:  
    ```python
    %%pyspark
    df.printSchema()
    ```  
-   *► Insertar captura de pantalla mostrando el esquema de la trama de datos.*
+  ![image](https://github.com/user-attachments/assets/5064e68f-0883-4516-b0bf-a7b3b84174a2)
+
 
 4. **Cargar los Datos en una Base de Datos de Spark**:  
    ```python
@@ -162,7 +153,8 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    spark.sql("CREATE DATABASE IF NOT EXISTS nyctaxi")
    df.write.mode("overwrite").saveAsTable("nyctaxi.trip")
    ```  
-   *► Insertar captura de pantalla mostrando el resultado de la creación de la base de datos.*
+  ![image](https://github.com/user-attachments/assets/6dad4c12-1c58-401c-83ba-ecac3cad3dce)
+
 
 5. **Análisis de los Datos Mediante Spark y Notebooks**:  
    ```python
@@ -170,7 +162,7 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    df = spark.sql("SELECT * FROM nyctaxi.trip") 
    display(df)
    ```  
-   *► Insertar captura de pantalla mostrando los datos de la tabla `nyctaxi.trip`.*
+   ![image](https://github.com/user-attachments/assets/3f11da96-9371-4c7d-92f0-266188f34458)
 
 6. **Guardar Resultados de Análisis**:  
    ```python
@@ -187,7 +179,7 @@ Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Sy
    display(df)
    df.write.saveAsTable("nyctaxi.passengercountstats")
    ```  
-   *► Insertar captura de pantalla mostrando el gráfico generado.*
+  ![image](https://github.com/user-attachments/assets/6e020b7e-d1da-48c9-80a8-85cb49402672)
 
 ### Conclusión
 En este tutorial, hemos aprendido a:
@@ -199,6 +191,4 @@ En este tutorial, hemos aprendido a:
 - Realizar análisis de datos utilizando Apache Spark y notebooks.
 
 Este es solo el comienzo. Puedes seguir explorando las herramientas disponibles en Synapse Studio, como la integración con Power BI para crear visualizaciones interactivas.
-
-*► Insertar captura de pantalla final con el dashboard de Synapse Studio.*
 
