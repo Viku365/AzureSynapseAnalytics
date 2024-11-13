@@ -2,6 +2,7 @@
 
 ## Descripción
 Este repositorio contiene un tutorial completo sobre cómo comenzar con Azure Synapse Analytics, incluyendo la creación de un área de trabajo, la configuración de una cuenta de almacenamiento, la carga y análisis de datos utilizando SQL sin servidor y Apache Spark. Está diseñado para ayudar a los usuarios a familiarizarse con Azure Synapse y sus herramientas principales.
+
 El tutorial esta basado en las guias de learn de microsoft https://learn.microsoft.com/es-es/azure/synapse-analytics/get-started
 
 ## Contenidos
